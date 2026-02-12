@@ -1,0 +1,4 @@
+pandas
+google-cloud-bigquery
+pyarrow
+```[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fcolab.research.google.com%2Fdrive%2F151CskA54hK8H49D68QgoIPLMEr1_bvXq%3Fusp%3Dsharing)]
