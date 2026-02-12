@@ -2,8 +2,8 @@ name: Daily CSV Pipeline
 
 on:
   schedule:
-    - cron: '0 8 * * *'
-  workflow_dispatch:
+    - cron: '0 8 * * *' # Runs every day at 8:00 AM UTC
+  workflow_dispatch:    # Allows manual trigger
 
 jobs:
   run-script:
@@ -18,8 +18,10 @@ jobs:
         with:
           python-version: '3.9'
 
+      # THIS IS THE FIXED LINE WITH ALL INGREDIENTS
       - name: Install dependencies
-        run: pip install pandas google-cloud-bigquery pyarrow db-dtypes
+        run: |
+          pip install pandas google-cloud-bigquery pyarrow db-dtypes requests beautifulsoup4 lxml
 
       - name: Run Python Script
         env:
