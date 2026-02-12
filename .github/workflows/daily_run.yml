@@ -19,9 +19,9 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+    - name: Install dependencies
+  run: |
+    pip install pandas google-cloud-bigquery pyarrow db-dtypes
 
       - name: Run Python Script
         env:
