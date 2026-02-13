@@ -24,8 +24,8 @@ GMAIL_USER = os.environ.get("GMAIL_USER")
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
 TO_EMAIL = os.environ.get("TO_EMAIL")
 GCP_JSON_KEY = os.environ.get("GCP_JSON_KEY")
-PROJECT_ID = "your-project-id"       # <--- REPLACE IF NOT USING ENV VAR
-DATASET_ID = "your_dataset_id"       # <--- REPLACE WITH YOUR BQ DATASET NAME
+PROJECT_ID = "deep-theorem-487010-s2"       # <--- REPLACE IF NOT USING ENV VAR
+DATASET_ID = "deep-theorem-487010-s2.regulations8pm"       # <--- REPLACE WITH YOUR BQ DATASET NAME
 
 # --- HELPER FUNCTIONS ---
 
