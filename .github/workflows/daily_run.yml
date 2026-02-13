@@ -1,32 +1,3 @@
-name: Daily CSV Pipeline
-
 on:
   schedule:
-    # Runs at 14:30 UTC (which is 8:00 PM India Time)
-    - cron: '30 14 * * *'
-  workflow_dispatch: # Allows manual trigger
-
-jobs:
-  run-script:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: |
-          pip install pandas google-cloud-bigquery pyarrow db-dtypes requests beautifulsoup4 lxml
-
-      - name: Run Python Script
-        env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          TO_EMAIL: ${{ secrets.TO_EMAIL }}
-          GCP_JSON_KEY: ${{ secrets.GCP_JSON_KEY }}
-        run: python main.py
+    - cron: '30 14 * * *'  # 14:30 UTC = 8:00 PM IST
